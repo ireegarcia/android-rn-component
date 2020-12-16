@@ -1,2 +1,2 @@
-# android-rn-component
-Attempt to wrap an iOS view controller and an android fragment into a RN component
+# native-rn-component
+Attempt to wrap a UIViewController or Fragment in a RN component

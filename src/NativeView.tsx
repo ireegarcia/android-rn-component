@@ -2,10 +2,8 @@ import { FC } from 'react';
 import { requireNativeComponent } from 'react-native';
 
 /**
- * Composes `View`.
+ * Composes `NativeView`.
  *
- * - src: string
- * - borderRadius: number
- * - resizeMode: 'cover' | 'contain' | 'stretch'
+ * - params: { title: string }
  */
 module.exports = requireNativeComponent('NativeView');

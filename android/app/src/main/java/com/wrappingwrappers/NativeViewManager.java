@@ -1,27 +1,13 @@
 package com.wrappingwrappers;
 
-import android.content.Context;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
+import android.view.View;
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
 import androidx.annotation.Nullable;
-
-class NativeView extends LinearLayout {
-    public NativeView(Context context) {
-        super(context);
-        setBackgroundColor(0xFF00FF00);
-        TextView tv = new TextView(context);
-        tv.setText("Sigue asi!");
-        addView(tv, 200, 80);
-    }
-}
 
 /// Fur die React!
 public class NativeViewManager extends SimpleViewManager<NativeView> {
@@ -40,11 +26,11 @@ public class NativeViewManager extends SimpleViewManager<NativeView> {
 
     @Override
     public NativeView createViewInstance(ThemedReactContext context) {
-        return new NativeView(context);//, Fresco.newDraweeControllerBuilder(), null, callerContext);
+        return new NativeView(context);
     }
 
-//    @ReactProp(name = "src")
-//    public void setSrc(NativeView view, @Nullable ReadableMap sources) {
-//        view.setSource(sources);
-//    }
+    @ReactProp(name = "params")
+    public void setInfo(NativeView view, @Nullable ReadableMap info) {
+        view.setInfo(info);
+    }
 }

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">WrappingWrappers</string>
+    <string name="app_name">Wrapping wrappers that wrap!</string>
+    <string name="dummy_button">Dummy Button!</string>
+    <string name="dummy_content">Oh, you DUMMY CONTENT!</string>
 </resources>
